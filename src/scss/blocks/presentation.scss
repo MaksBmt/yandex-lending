@@ -1,0 +1,194 @@
+.presentation {
+    position: relative;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 120px;
+
+    @media(min-width: $desktop) {
+        padding-left: 72px;
+        padding-right: 72px;
+
+        .navigation {
+            display: none;
+        }
+    }
+
+    &__wrapper {
+        @media(min-width: $desktop) {
+            position: relative;
+        }
+    }
+
+    &__title {
+        margin-bottom: 12px;
+
+        @media(min-width: $desktop) {
+            font-size: 54px;
+            line-height: 65px;
+            width: 806px;
+            margin-bottom: 0;
+        }
+    }
+
+    &__note {
+        font-family: "GolosText-Regular";
+        font-size: 18px;
+        line-height: 22px;
+        color: $color-blue;
+
+        @media(min-width: $desktop) {
+            display: block;
+            font-size: 20px;
+            line-height: 24px;
+            width: 280px;
+            position: absolute;
+            bottom: 10px;
+            left: 310px;
+        }
+    }
+
+    &__swiper {
+        position: relative;
+
+        &::after {
+            position: absolute;
+            content: '';
+            width: 335px;
+            height: 190px;
+            top: -22px;
+            left: 16px;
+            background-image: url(../img/air.png);
+            background-repeat: no-repeat;
+            z-index: 10;
+
+            @media(min-width: $desktop) {
+                top: 218px;
+                left: 900px;
+            }
+        }
+    }
+
+    &__list {
+        position: relative;
+        padding-top: 120px;
+        padding-bottom: 30px;
+
+        @media(min-width: $desktop) {
+            padding-top: 60px;
+
+            display: grid;
+            grid-template-columns: 394px 394px 394px;
+            grid-template-rows: auto auto auto;
+            gap: 20px;
+        }
+    }
+
+    &__item {
+        position: relative;
+        height: 300px;
+        box-sizing: border-box;
+
+        @media(min-width: $desktop) {
+            display: flex;
+            height: auto;
+
+            &--first {
+                grid-column: 1/3;
+                grid-row: 1/2;
+            }
+
+            &--third {
+                grid-column: 3/4;
+                grid-row: 1/3;
+
+                .presentation__text {
+                    padding-right: 35px;
+                }
+            }
+
+            &--seventh {
+                grid-column: 2/4;
+                grid-row: 3/4;
+
+                .presentation__text {
+                    width: 808px;
+                    padding-right: 335px;
+                }
+            }
+
+            &--fifth {
+                grid-column: 1/2;
+                grid-row: 3/4;
+                width: 394px;
+            }
+
+            &--fourth {
+                width: 808px;
+            }
+        }
+    }
+
+    &__text {
+        position: relative;
+        padding-bottom: 30px;
+        padding-top: 55px;
+        padding-left: 20px;
+        padding-right: 20px;
+        display: flex;
+        box-sizing: border-box;
+
+        font-family: "GolosText-Medium";
+        font-size: 18px;
+        line-height: 22px;
+        color: $color-dark;
+
+        background-color: #E9DED4;
+
+        &::before {
+            position: absolute;
+            content: '';
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: url(../img/fon-beige-vertical.webp);
+            mix-blend-mode: color-burn;
+        }
+
+        &--padding {
+            padding-top: 0;
+        }
+
+        @media(min-width: $desktop) {
+            width: 394px;
+            padding-top: 20px;
+            font-size: 20px;
+            line-height: 24px;
+
+            &:nth-child(2) {
+                margin-left: 20px;
+            }
+        }
+    }
+
+    &__number {
+        flex-shrink: 0;
+        width: 36px;
+        height: 36px;
+        margin-right: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        font-family: "GolosText-SemiBold";
+        font-size: 20px;
+        color: $color-dark;
+
+        background-color: $white;
+        border-radius: 50%;
+
+        @media(min-width: $desktop){
+            margin-right: 15px;
+        }
+    }
+}

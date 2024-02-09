@@ -1,0 +1,27 @@
+.footer {
+    background-color: #E9DED4;
+
+    &__wrap {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 40px;
+        padding-bottom: 50px;
+
+        @media(min-width: $desktop){
+            padding-left: 72px;
+            padding-right: 72px;
+        }
+    }
+
+    &__text {
+        font-family: "GolosText-Regular";
+        font-size: 16px;
+        line-height: 20px;
+        opacity: 0.6;
+        color: $color-dark;
+    }
+
+    &__line {
+        height: 38px;
+      }
+}

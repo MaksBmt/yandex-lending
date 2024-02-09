@@ -1,0 +1,45 @@
+.caption {
+    font-family: "Merriweather-Regular";
+    color: $color-dark;
+    font-size: 28px;
+    line-height: 38px;
+    text-transform: uppercase;
+    font-weight: 400;
+
+    &__red {
+        font-family: "Merriweather-Bold";
+        color: $color-red;
+        font-weight: 700;
+
+        &--block {
+            @media(min-width: $desktop) {
+                display: block;
+            }
+        }
+    }
+
+    &--36 {
+        font-size: 36px;
+        line-height: 40px;
+
+        @media(min-width: $desktop) {
+            font-size: 60px;
+            line-height: 66px;
+        }
+    }
+
+    &--28 {
+        font-size: 28px;
+        line-height: 38px;
+
+        @media(min-width: $desktop) {
+            font-size: 36px;
+            line-height: 50px;
+        }
+    }
+
+    &__center {
+        display: inline-block;
+        text-align: center;
+    }
+}

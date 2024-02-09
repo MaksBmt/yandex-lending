@@ -1,0 +1,18 @@
+@import "fonts";
+@import "variables";
+@import "mixins";
+@import "core";
+
+@import '../../node_modules/swiper/swiper-bundle';
+
+@import "blocks/wrap";
+@import "blocks/header";
+@import "blocks/caption";
+@import "blocks/line";
+@import "blocks/promo";
+@import "blocks/price";
+@import "blocks/navigation";
+@import "blocks/presentation";
+@import "blocks/compound";
+@import "blocks/footer";
+

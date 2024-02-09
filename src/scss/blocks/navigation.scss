@@ -1,0 +1,84 @@
+.navigation {
+    display: flex;
+    justify-content: center;
+
+    &__btn {
+        position: relative;
+        width: 36px;
+        height: 36px;
+        background-color: $color-dark;
+        cursor: pointer;
+        border-radius: 50%;
+        z-index: 500;
+        transition: all 0.2s ease 0s;
+
+        &:hover {
+            background-color: $color-yellow;
+        }
+
+        &::before {
+            position: absolute;
+            content: '';
+            width: 10px;
+            height: 14px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        &--prev {
+            position: relative;
+            margin-right: 20px;
+
+            &::before {
+                background-image: url(../img/btn-left.svg);
+            }
+        }
+
+        &--next {
+            position: relative;
+            margin-left: 20px;
+
+            &::before {
+                background-image: url(../img/btn-right.svg);
+            }
+        }
+
+        &:disabled {
+            background-color: $disabled;
+        }
+    }
+
+    .swiper-pagination {
+        position: relative;
+        width: auto;
+        display: flex;
+        align-items: center;
+        bottom: 0;
+    }
+
+    .swiper-pagination-bullet {
+        width: 10px;
+        height: 10px;
+        background-color: $color-gray;
+    }
+
+    .swiper-pagination-bullet-active {
+        background-color: $color-dark;
+    }
+
+    .swiper-pagination-fraction {
+        font-family: "GolosText-Regular";
+        font-size: 16px;
+        line-height: 20px;
+        color: $color-dark;
+    }
+
+    .swiper-pagination-total {
+        margin-left: 4px;
+        opacity: 0.6;
+    }
+}

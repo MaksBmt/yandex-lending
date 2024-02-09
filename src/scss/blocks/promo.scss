@@ -1,0 +1,55 @@
+.promo {
+    padding: 30px 20px;
+
+    @media(min-width: $desktop) {
+        padding: 100px 72px
+    }
+
+    &__wrap {
+        width: 335px;
+        margin: 0 auto;
+
+        @media(min-width: $desktop) {
+            width: auto;
+            margin: 0;
+        }
+    }
+
+    &__title {
+        position: relative;
+        padding-bottom: 252px;
+
+        &::before {
+            position: absolute;
+            content: '';
+            width: 335px;
+            height: 213px;
+            bottom: 24px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-image: url(../img/party-all.webp);
+            background-repeat: no-repeat;
+
+            @media(min-width: $desktop) {
+                width: 394px;
+                height: 250px;
+                left: 820px;
+                bottom: 0;
+                transform: none;
+                top: -30px;
+                background-image: url(../img/party-all-desktop.webp);
+            }
+        }
+
+        @media(min-width: $desktop) {
+            display: inline;
+            padding-bottom: 0;
+        }
+    }
+
+    &__text {
+        @media(min-width: $desktop) {
+            display: inline;
+        }
+    }
+}
